@@ -1,5 +1,5 @@
-""""""""""""""""""""""""""""""""""""""""""""
-" minpac vim8 plugin manager
+	""""""""""""""""""""""""""""""""""""""""""""
+	" minpac vim8 plugin manager
 """"""""""""""""""""""""""""""""""""""""""""
 set packpath^=~/.vim
 silent! packadd minpac
@@ -27,7 +27,7 @@ if exists('*minpac#init')
 	call minpac#add('kien/ctrlp.vim')
 
 	" lightline
-	call minpac#add('itchyny/lightline')
+	call minpac#add('itchyny/lightline.vim')
 
 	" tagbar
 	call minpac#add('majutsushi/tagbar')
@@ -55,7 +55,7 @@ if exists('*minpac#init')
 
 
 	" Load the plugins right now. (optional)
-	"packloadall
+	" packloadall
 	
 	" set commands
 	command! PackUpdate packadd minpac | source ~/.vimrc | call minpac#update()
@@ -172,17 +172,8 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 """"""""""""""""""""""""""""""""""""""""""""""""
 " builtin netrw
 """"""""""""""""""""""""""""""""""""""""""""""""
-" nerdtree alike
 let g:netrw_banner = 0
-"let g:netrw_liststyle = 3
-"let g:netrw_browse_split = 4
-"let g:netrw_altv = 1
-"let g:netrw_winsize = 20
-"augroup ProjectDrawer
-"autocmd!
-"autocmd VimEnter * :Vexplore
-"augroup END
-let g:netrw_menu = 0
+let g:netrw_liststyle = 3
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " lightline
