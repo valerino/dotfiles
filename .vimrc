@@ -119,11 +119,6 @@ autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 autocmd! bufwritepost .vimrc source %
 
 """""""""""""""""""""""""""""""""""""""""""""""
-" dracula
-"""""""""""""""""""""""""""""""""""""""""""""""
-" use default term background for dracula
-
-"""""""""""""""""""""""""""""""""""""""""""""""
 " tagbar
 """""""""""""""""""""""""""""""""""""""""""""""
 " open tagbar with f8
@@ -167,14 +162,20 @@ let g:ctrlp_match_window_bottom=1
 let g:ctrlp_max_height=25
 let g:ctrlp_clear_cache_on_exit=0
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-					   let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " builtin netrw
 """"""""""""""""""""""""""""""""""""""""""""""""
-let g:netrw_banner = 0
+"let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-
+let g:netrw_altv=1
+let g:netrw_preview = 1
+let g:netrw_alto = 0
+let g:netrw_list_hide='.*\.swp$'
+let g:netrw_browse_split = 4
+let g:netrw_winsize = 25
+"let g:netrw_chgwin = winnr()
 """"""""""""""""""""""""""""""""""""""""""""""""
 " lightline
 """"""""""""""""""""""""""""""""""""""""""""""""
