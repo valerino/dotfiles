@@ -153,7 +153,7 @@ map <tab> <Plug>CompletorCppJumpToPlaceholder<esc>
 " ctrlp
 """"""""""""""""""""""""""""""""""""""""""""""""
 " open with esc-esc
-let g:ctrlp_map = '<esc><esc>'
+let g:ctrlp_map = '<c-p>'
 
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden=1

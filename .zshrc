@@ -19,6 +19,10 @@ zplug "tarruda/zsh-autosuggestions", use:"zsh-autosuggestions.zsh"
 # Load theme file
 zplug 'dracula/zsh', as:theme
 
+# stuff from oh-my-zsh
+zplug "lib/key-bindings", from:oh-my-zsh
+zplug "lib/directories", from:oh-my-zsh
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -54,4 +58,7 @@ export PATH=~/android-sdk/build-tools/$ANDROID_BUILD_TOOLS_VER:$PATH
 export ANDROID_SDK=~/android-sdk
 export ANDROID_NDK=~/android-ndk
 export NDK_PATH=~/android-ndk
+
+# qt installed from brew
+export PATH=/usr/local/opt/qt/bin:$PATH
 
