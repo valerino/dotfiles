@@ -9,9 +9,9 @@ zplug "plugins/history", from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-completions"
+#zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "tarruda/zsh-autosuggestions", use:"zsh-autosuggestions.zsh"
+#zplug "tarruda/zsh-autosuggestions", use:"zsh-autosuggestions.zsh"
 
 # Can manage local plugins
 # zplug "~/.zsh", from:local
@@ -49,14 +49,18 @@ alias readelf="~/android-ndk/toolchains/aarch64-linux-android-4.9/prebuilt/darwi
 # path
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=:~/Library/Python/3.6/bin:~/Library/Python/3.6/lib/python/site-packages:$PATH
-export PATH=:~/go/bin:$PATH
+
+# go
+#export PATH=:~/go/bin:$PATH
 
 # android
 ANDROID_BUILD_TOOLS_VER=27.0.3
 export PATH=~/android-sdk/platform-tools:$PATH
 export PATH=~/android-sdk/build-tools/$ANDROID_BUILD_TOOLS_VER:$PATH
+export PATH=~/android-ndk:$PATH
 export ANDROID_SDK=~/android-sdk
 export ANDROID_NDK=~/android-ndk
+export ANDROID_NDK_ROOT=~/android-ndk
 export NDK_PATH=~/android-ndk
 
 # qt installed from brew
