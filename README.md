@@ -18,10 +18,23 @@ git clone https://github.com/zplug/zplug ~/.zplug
 
 * accept zplug prompts to install plugins
 
+* enter vim, issue _PackUpdate_ once to install the missing plugins
+
 * to update vim plugins, issue command _PackUpdate_ in vim once in a while...
 
 * to update zplug, issue _zplug update_ once in a while....
 
-## other useful mappings (macos oriented)
+## fonts
+~~~
+brew tap caskroom/fonts
+brew cask install font-hack-nerd-font
+~~~
+
+## iTerm2 (macos)
+* install dracula theme from https://github.com/dracula/iterm
+
+## mappings (macos)
 ### use app as https://manytricks.com/keycodes to get the right code
 * in _iTerm2_, map _Command-W_ to 0x17 (_ctrl-w_) to switch vim windows
+
+
