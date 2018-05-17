@@ -1,0 +1,19 @@
+# install a dircolor, i.e. dracula colors for gnome terminal (https://github.com/dracula/gnome-terminal)
+eval " dircolors -b ~/.dir_colors/dircolors "
+alias ls='ls --color=auto'
+
+# root of AOSP source
+AOSP_ROOT=~/android_src
+
+# target lunch configuration
+LUNCH_CONFIG=aosp_angler-userdebug
+
+# ffmpeg-static build for linux: https://github.com/zimbatm/ffmpeg-static
+
+# aosp dev
+export PATH=~/$AOSP_ROOT/out/host/linux-x86/bin:~/bin/ffmpeg-static/bin:$PATH
+export LC_ALL=C
+cd $AOSP_ROOT
+source build/envsetup.sh
+lunch $LUNCH_CONFIG
+

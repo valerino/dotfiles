@@ -16,6 +16,13 @@ git clone https://github.com/k-takata/minpac
 git clone https://github.com/zplug/zplug ~/.zplug
 ~~~
 
+* use my customizations as base, they are loaded in the end of .zshrc according to the running OS
+~~~
+# symlink customizations and change them accordingly to suit your needs/os/env
+ln -s /path/to/this_repo/.linux_customize_zshrc ~/.linux_customize_zshrc
+ln -s /path/to/this_repo/.macos_customize_zshrc ~/.macos_customize_zshrc
+~~~
+
 * accept zplug prompts to install plugins
 
 * enter vim, issue _PackUpdate_ once to install the missing plugins
@@ -24,7 +31,7 @@ git clone https://github.com/zplug/zplug ~/.zplug
 
 * to update zplug, issue _zplug update_ once in a while....
 
-## fonts
+## fonts (macos)
 ~~~
 brew tap caskroom/fonts
 brew cask install font-hack-nerd-font
@@ -33,6 +40,11 @@ brew cask install font-hack-nerd-font
 ## iTerm2 (macos)
 * install dracula theme from https://github.com/dracula/iterm
 
+## Gnome-terminal (ubuntu)
+* sudo apt-get install zsh
+* chsh -s `which zsh`
+* install https://github.com/dracula/gnome-terminal
+ 
 ## mappings (macos)
 ### use app as https://manytricks.com/keycodes to get the right code
 * in _iTerm2_, map _Command-W_ to 0x17 (_ctrl-w_) to switch vim windows

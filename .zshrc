@@ -6,7 +6,7 @@ source ~/.zplug/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/history", from:oh-my-zsh
-zplug "plugins/osx", from:oh-my-zsh
+zplug "plugins/osx", from:oh-my-zsh, , if:"[[ $OSTYPE == *darwin* ]]"
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "zsh-users/zsh-history-substring-search"
 #zplug "zsh-users/zsh-completions"
@@ -41,28 +41,19 @@ zplug load --verbose
 # terminal
 export LANG=en_US.UTF-8
 
-# aliases
-alias sed=gsed # uses gnu sed
-alias ls='ls -G'
-alias readelf="~/android-ndk/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-readelf"
-
 # path
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=:~/Library/Python/3.6/bin:~/Library/Python/3.6/lib/python/site-packages:$PATH
+export PATH=~/bin:$PATH
 
-# go
-#export PATH=:~/go/bin:$PATH
+# additional customization
+case `uname` in
+  Darwin)
+ 	# my usual macos customizations
+	source ~/.macos_customize_zshrc
+  ;;
+  Linux)
+	# my usual linux customizations
+ 	source ~/.linux_customize_zshrc
 
-# android
-ANDROID_BUILD_TOOLS_VER=27.0.3
-export PATH=~/android-sdk/platform-tools:$PATH
-export PATH=~/android-sdk/build-tools/$ANDROID_BUILD_TOOLS_VER:$PATH
-export PATH=~/android-ndk:$PATH
-export ANDROID_SDK=~/android-sdk
-export ANDROID_NDK=~/android-ndk
-export ANDROID_NDK_ROOT=~/android-ndk
-export NDK_PATH=~/android-ndk
-
-# qt installed from brew
-export PATH=/usr/local/opt/qt/bin:$PATH
+  ;;
+esac
 

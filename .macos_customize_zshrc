@@ -1,0 +1,27 @@
+# aliases
+alias sed=gsed # uses gnu sed
+alias ls='ls -G'
+
+# path
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
+
+# python
+export PATH=:~/Library/Python/3.6/bin:~/Library/Python/3.6/lib/python/site-packages:$PATH
+
+# golang
+export PATH=~/go/bin:$PATH
+
+# android
+ANDROID_BUILD_TOOLS_VER=27.0.3
+export ANDROID_SDK=~/android-sdk
+export ANDROID_NDK=~/android-ndk
+export ANDROID_NDK_ROOT=~/android-ndk
+export NDK_PATH=~/android-ndk
+export PATH=$ANDROID_SDK/platform-tools:$PATH
+export PATH=$ANDROID_SDK/build-tools/$ANDROID_BUILD_TOOLS_VER:$PATH
+export PATH=$ANDROID_NDK:$PATH
+alias readelf='$ANDROID_NDK/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-readelf'
+
+# qt installed with brew
+export PATH=/usr/local/opt/qt/bin:$PATH
+
