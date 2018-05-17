@@ -2,18 +2,9 @@
 eval " dircolors -b ~/.dir_colors/dircolors "
 alias ls='ls --color=auto'
 
-# root of AOSP source
-AOSP_ROOT=~/android_src
+# this is for AOSP dev, aosp doesn't like zsh....
+if [ -f ~/.linux_customize_bashrc ]; then
+	bash --rcfile ~/.linux_customize_bashrc
+fi
 
-# target lunch configuration
-LUNCH_CONFIG=aosp_angler-userdebug
-
-# ffmpeg-static build for linux: https://github.com/zimbatm/ffmpeg-static
-
-# aosp dev
-export PATH=~/$AOSP_ROOT/out/host/linux-x86/bin:~/bin/ffmpeg-static/bin:$PATH
-export LC_ALL=C
-cd $AOSP_ROOT
-source build/envsetup.sh
-lunch $LUNCH_CONFIG
 

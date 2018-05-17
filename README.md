@@ -21,6 +21,9 @@ git clone https://github.com/zplug/zplug ~/.zplug
 # symlink customizations and change them accordingly to suit your needs/os/env
 ln -s /path/to/this_repo/.linux_customize_zshrc ~/.linux_customize_zshrc
 ln -s /path/to/this_repo/.macos_customize_zshrc ~/.macos_customize_zshrc
+
+# this is only for developing AOSP on linux, zsh will spawn bash
+ln -s /path/to/this_repo/.linux_customize_bashrc ~/.linux_customize_bashrc 
 ~~~
 
 * accept zplug prompts to install plugins

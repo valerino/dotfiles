@@ -1,0 +1,20 @@
+# buildenv customization for AOSP
+# tested on ubuntu
+# assumes repo installed in ~/bin
+# ffmpeg-static built from https://github.com/zimbatm/ffmpeg-static
+
+source ~/.bashrc
+
+# aosp root checked out here with repo
+AOSP_ROOT=~/android_src
+
+# the target device for AOSP
+AOSP_DEVICE_CONFIG=aosp_angler-userdebug
+
+export PATH=~/bin:$AOSP_ROOT/out/host/linux-x86/bin:~/bin/ffmpeg-static/bin:$PATH
+export LC_ALL=C
+cd $AOSP_ROOT
+source build/envsetup.sh
+lunch $AOSP_DEVICE_CONFIG
+
+
