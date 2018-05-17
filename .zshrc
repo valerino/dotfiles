@@ -9,9 +9,9 @@ zplug "plugins/history", from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh, , if:"[[ $OSTYPE == *darwin* ]]"
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "zsh-users/zsh-history-substring-search"
-#zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
-#zplug "tarruda/zsh-autosuggestions", use:"zsh-autosuggestions.zsh"
+zplug "tarruda/zsh-autosuggestions", use:"zsh-autosuggestions.zsh"
 
 # Can manage local plugins
 # zplug "~/.zsh", from:local
