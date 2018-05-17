@@ -127,7 +127,7 @@ nmap <F8> :TagbarToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""
 " autoformat
 """""""""""""""""""""""""""""""""""""""""""""""
-au BufWrite *.py,*.c,*.cpp,*.h,*.hpp,*.m,*.mm,*.go,*.sh :Autoformat
+au BufWrite *.c,*.cpp,*.h,*.hpp,*.m,*.mm,*.go,*.sh :Autoformat
 
 """""""""""""""""""""""""""""""""""""""""""""""
 " maralla completor
