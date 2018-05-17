@@ -41,6 +41,10 @@ zplug load --verbose
 # terminal
 export LANG=en_US.UTF-8
 
+# vim as default editor
+export VISUAL=vim
+export EDITOR=$VISUAL
+
 # path
 export PATH=~/bin:$PATH
 
