@@ -13,7 +13,8 @@ AOSP_ROOT=~/android_src
 AOSP_DEVICE_CONFIG=aosp_angler-userdebug
 
 export PATH=~/bin:$AOSP_ROOT/out/host/linux-x86/bin:~/bin/ffmpeg-static/bin:$PATH
-export LC_ALL=en_US.UTF-8
+#export LC_ALL=en_US.UTF-8
+export LC_ALL=C
 
 cd $AOSP_ROOT
 source build/envsetup.sh

@@ -17,6 +17,9 @@ if exists('*minpac#init')
 	" asynchronous lint engine
 	call minpac#add('w0rp/ale')
 
+	" to copy line with line numbers with c-y
+	call minpac#add('ujihisa/nclipper.vim')
+
 	" vim comment plugin
 	call minpac#add('tyru/caw.vim')
 
