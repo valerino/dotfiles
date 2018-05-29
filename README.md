@@ -6,6 +6,7 @@ uses _minpac_ vim8 plugin manager and zplug (assumes _zsh_ as the default shell)
 ln -s /path/to/this_repo/.zshrc ~/.zshrc
 ln -s /path/to/this_repo/.vimrc ~/.vimrc 
 ln -s /path/to/this_repo/.clang-format ~/.clang-format
+ln -s /path/to/this_repo/.tmux.conf ~/.tmux.conf
 ~~~
 
 * install the package managers:
