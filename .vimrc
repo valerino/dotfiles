@@ -1,5 +1,5 @@
-	""""""""""""""""""""""""""""""""""""""""""""
-	" minpac vim8 plugin manager
+""""""""""""""""""""""""""""""""""""""""""""
+" minpac vim8 plugin manager
 """"""""""""""""""""""""""""""""""""""""""""
 set packpath^=~/.vim
 silent! packadd minpac
