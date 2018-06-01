@@ -86,7 +86,11 @@ set number
 set splitbelow
 
 " share clipboard with host
-set clipboard=unnamed
+if has('mac')
+	set clipboard=unnamed
+elseif has('unix')
+	set clipboard=unnamedplus
+endif
 
 " fix backspace
 set backspace=indent,eol,start
@@ -130,7 +134,7 @@ nmap <F8> :TagbarToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""
 " autoformat
 """""""""""""""""""""""""""""""""""""""""""""""
-au BufWrite *.c,*.cpp,*.h,*.hpp,*.m,*.mm,*.go,*.sh :Autoformat
+"au BufWrite *.c,*.cpp,*.h,*.hpp,*.m,*.mm,*.go,*.sh :Autoformat
 
 """""""""""""""""""""""""""""""""""""""""""""""
 " maralla completor
