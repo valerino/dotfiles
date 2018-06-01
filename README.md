@@ -1,5 +1,5 @@
 # my dotfiles
-uses _minpac_ vim8 plugin manager and zplug (assumes _zsh_ as the default shell)
+uses _minpac_ vim8 plugin manager, zplug (assumes _zsh_ as the default shell), tpm plugin manager for tmux
 
 * after cloning this repo, symlink to your home:
 ~~~
@@ -15,6 +15,7 @@ mkdir -p ~/.vim/pack/plugins/opt
 cd ~/.vim/pack/plugins/opt
 git clone https://github.com/k-takata/minpac
 git clone https://github.com/zplug/zplug ~/.zplug
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~~~
 
 * use my customizations as base, they are loaded in the end of .zshrc according to the running OS
@@ -23,7 +24,7 @@ git clone https://github.com/zplug/zplug ~/.zplug
 ln -s /path/to/this_repo/.linux_customize_zshrc ~/.linux_customize_zshrc
 ln -s /path/to/this_repo/.macos_customize_zshrc ~/.macos_customize_zshrc
 
-# this is only for developing AOSP on linux, zsh will spawn bash
+# this includes configuration for developing AOSP on linux, zsh will spawn bash
 ln -s /path/to/this_repo/.linux_customize_bashrc ~/.linux_customize_bashrc 
 ~~~
 
@@ -34,6 +35,9 @@ ln -s /path/to/this_repo/.linux_customize_bashrc ~/.linux_customize_bashrc
 * to update vim plugins, issue command _PackUpdate_ in vim once in a while...
 
 * to update zplug, issue _zplug update_ once in a while....
+
+* to install tmux plugin at first run: C-a C-I
+	* tmux prefix is set to C-a (screen-style)
 
 ## fonts (macos)
 ~~~
