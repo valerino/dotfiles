@@ -32,12 +32,18 @@ ln -s /path/to/this_repo/.linux_customize_bashrc ~/.linux_customize_bashrc
 
 * enter vim, issue _PackUpdate_ once to install the missing plugins
 
-* to update vim plugins, issue command _PackUpdate_ in vim once in a while...
+	* to update vim plugins, issue command _PackUpdate_ in vim once in a while...
 
 * to update zplug, issue _zplug update_ once in a while....
 
 * to install tmux plugin at first run: C-a C-I
 	* tmux prefix is set to C-a (screen-style)
+
+## macos
+you may need to install gsed
+~~~
+brew -v install gnu-sed
+~~~
 
 ## fonts (macos)
 ~~~
