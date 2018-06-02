@@ -54,7 +54,7 @@ brew cask install font-hack-nerd-font
 ## iTerm2 (macos)
 * install dracula theme from https://github.com/dracula/iterm
 
-## Gnome-terminal (ubuntu)
+## Gnome-terminal (linux)
 * sudo apt-get install zsh
 * chsh -s `which zsh`
 * install https://github.com/dracula/gnome-terminal
