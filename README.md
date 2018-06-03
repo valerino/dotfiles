@@ -62,7 +62,8 @@ brew cask install font-hack-nerd-font
 ## mappings (macos)
 ### use app as https://manytricks.com/keycodes to get the right code
 * in _iTerm2_, map _Command-W_ to 0x17 (_ctrl-w_) to switch vim windows
-* in _iTerm2_, map _Command-A_ to \\<C-A> ('send text with Vim special chars'). This will remap Ctrl-a to Command-a in Tmux.
+* in _iTerm2_, map _Command-A_ to \\\<C-A> ('send text with Vim special chars').
+	* This will remap Ctrl-a to Command-a in Tmux.
 
 
 
