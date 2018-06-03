@@ -147,14 +147,14 @@ let g:completor_gocode_binary = 'gocode'
 let g:completor_auto_close_doc = '0'
 
 " visual studio alike (cycle with cursor, select with tab)
-imap <expr> <Tab> pumvisible() ? "\<C-y><esc>%<esc>" : "\<Tab>"
+"imap <expr> <Tab> pumvisible() ? "\<C-y><esc>%<esc>" : "\<Tab>"
 
 " plays nice with ultisnips, select snippet with Enter
 let g:UltiSnipsExpandTrigger = "<nop>"
 inoremap <expr> <CR> pumvisible() ? "<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>" : "\<CR>"
 
 " last but not least, tab switches among parameters after completion
-map <tab> <Plug>CompletorCppJumpToPlaceholder<esc>
+"map <tab> <Plug>CompletorCppJumpToPlaceholder<esc>
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " ctrlp
