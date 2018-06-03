@@ -60,10 +60,13 @@ brew cask install font-hack-nerd-font
 * install https://github.com/dracula/gnome-terminal
  
 ## mappings (macos)
-### use app as https://manytricks.com/keycodes to get the right code
-* in _iTerm2_, map _Command-W_ to 0x17 (_ctrl-w_) to switch vim windows
-* in _iTerm2_, map _Command-A_ to \\\<C-A> ('send text with Vim special chars').
+* in _iTerm2_, map _Command-w_ to \\\<C-w> ('send text with Vim special chars').
+	* This will remap Ctrl-w to Command-w to cycle windows in Vim.
+* in _iTerm2_, map _Command-a_ to \\\<C-a> ('send text with Vim special chars').
 	* This will remap Ctrl-a to Command-a in Tmux.
+* in _iTerm2_, map _Command-p_ to \\\<C-p> ('send text with Vim special chars').
+	* This will remap Ctrl-p to Command-p to activate CtrlP plugin in Vim 
+
 
 
 
