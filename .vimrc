@@ -8,12 +8,18 @@ if exists('*minpac#init')
 
 	" minpac must have {'type': 'opt'} so that it can be loaded with `packadd`.
 	call minpac#add('k-takata/minpac', {'type': 'opt'})
-
+	
 	" Add other plugins here.
 
+	" visualize git changes
+	call minpac#add('airblade/vim-gitgutter')
+	
+	" sublime style multiple cursors
+	call minpac#add('terryma/vim-multiple-cursors')
+	
 	" match brakets
-	call minpac#add('jiangmiao/auto-pairs')
-
+	call minpac#add('tpope/vim-surround')
+	
 	" asynchronous lint engine
 	call minpac#add('w0rp/ale')
 
@@ -25,6 +31,12 @@ if exists('*minpac#init')
 
 	" maralla completor
 	call minpac#add('maralla/completor.vim')
+
+	" vim defaults
+	call minpac#add('tpope/vim-sensible')
+	
+	" vinegar netrw extension
+	call minpac#add('tpope/vim-vinegar')
 
 	" ctrlP fuzzy search
 	call minpac#add('kien/ctrlp.vim')
@@ -71,13 +83,9 @@ endif
 " set color
 color dracula
 let g:dracula_colorterm = 0
-syntax on 
 
 " encoding utf8
 set enc=utf-8
-
-" show ruler
-set ruler
 
 " show line numbers
 set number
