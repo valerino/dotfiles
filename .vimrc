@@ -42,7 +42,7 @@ if exists('*minpac#init')
 	call minpac#add('tpope/vim-vinegar')
 
 	" ctrlP fuzzy search
-	call minpac#add('kien/ctrlp.vim')
+	call minpac#add('ctrlpvim/ctrlp.vim')
 
 	" lightline
 	call minpac#add('itchyny/lightline.vim')
