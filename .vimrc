@@ -10,6 +10,9 @@ if exists('*minpac#init')
 	call minpac#add('k-takata/minpac', {'type': 'opt'})
 	
 	" Add other plugins here.
+	
+	" unix helpers
+	call minpac#add('tpope/vim-eunuch')
 
 	" visualize git changes
 	call minpac#add('airblade/vim-gitgutter')
@@ -69,6 +72,9 @@ if exists('*minpac#init')
 	call minpac#add('plasticboy/vim-markdown')
 
 
+	" remap esc to handle shitty touchbar on mbp
+	call minpac#add('zhou13/vim-easyescape')
+	
 	" Load the plugins right now. (optional)
 	" packloadall
 	
@@ -107,8 +113,11 @@ set backspace=indent,eol,start
 set hlsearch
 noremap <CR> :noh<CR><CR>
 
-" map esc to jj in insert mode
-imap jj <esc>
+" map esc to jk/kj in insert mode
+let g:easyescape_chars = { "j": 1, "k": 1 }
+let g:easyescape_timeout = 100
+cnoremap jk <ESC>
+cnoremap kj <ESC>
 
 " set tabs=4
 set tabstop=4
