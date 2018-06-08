@@ -10,7 +10,7 @@ if exists('*minpac#init')
 	call minpac#add('k-takata/minpac', {'type': 'opt'})
 	
 	" Add other plugins here.
-	
+
 	" unix helpers
 	call minpac#add('tpope/vim-eunuch')
 
@@ -20,7 +20,7 @@ if exists('*minpac#init')
 	" sublime style multiple cursors
 	call minpac#add('terryma/vim-multiple-cursors')
 	
-	" match brakets
+	" surround with brackets, quotes, ....
 	call minpac#add('tpope/vim-surround')
 	
 	" asynchronous lint engine
@@ -34,6 +34,12 @@ if exists('*minpac#init')
 
 	" maralla completor
 	call minpac#add('maralla/completor.vim')
+
+	" tab completions
+	call minpac#add('ervandew/supertab')
+
+	" auto brackets/parens/...
+	call minpac#add('jiangmiao/auto-pairs')
 
 	" vim defaults
 	call minpac#add('tpope/vim-sensible')
