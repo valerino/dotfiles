@@ -38,6 +38,9 @@ if exists('*minpac#init')
 	" tab completions
 	call minpac#add('ervandew/supertab')
 
+	" snippets
+	call minpac#add('SirVer/ultisnips')
+
 	" auto brackets/parens/...
 	call minpac#add('jiangmiao/auto-pairs')
 
@@ -58,6 +61,7 @@ if exists('*minpac#init')
 
 	" ultisnips
 	call minpac#add('SirVer/ultisnips')
+	call minpac#add('honza/vim-snippets')
 
 	" dracula theme
 	call minpac#add('dracula/vim')
@@ -149,6 +153,17 @@ autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 autocmd! bufwritepost .vimrc source %
 
 """""""""""""""""""""""""""""""""""""""""""""""
+" ultisnips
+"""""""""""""""""""""""""""""""""""""""""""""""
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+"let g:UltiSnipsEditSplit="vertical"
+
+"""""""""""""""""""""""""""""""""""""""""""""""
 " tagbar
 """""""""""""""""""""""""""""""""""""""""""""""
 " open tagbar with f8
@@ -180,6 +195,11 @@ inoremap <expr> <CR> pumvisible() ? "<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>" 
 "map <tab> <Plug>CompletorCppJumpToPlaceholder<esc>
 
 """"""""""""""""""""""""""""""""""""""""""""""""
+" supertab
+""""""""""""""""""""""""""""""""""""""""""""""""
+let g:SuperTabCrMapping=1
+
+""""""""""""""""""""""""""""""""""""""""""""""""
 " ctrlp
 """"""""""""""""""""""""""""""""""""""""""""""""
 " open with esc-esc
@@ -206,6 +226,7 @@ let g:netrw_list_hide='.*\.swp$'
 "let g:netrw_browse_split = 4
 "let g:netrw_winsize = 25
 "let g:netrw_chgwin = winnr()
+
 """"""""""""""""""""""""""""""""""""""""""""""""
 " lightline
 """"""""""""""""""""""""""""""""""""""""""""""""
