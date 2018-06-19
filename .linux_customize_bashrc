@@ -7,7 +7,7 @@
 source ~/.bashrc
 
 # aosp root checked out here with repo
-AOSP_ROOT=~/android_src
+AOSP_ROOT=~/aosp
 
 # the target device for AOSP
 #AOSP_DEVICE_CONFIG=aosp_angler-userdebug
@@ -25,6 +25,6 @@ lunch $AOSP_DEVICE_CONFIG
 export ANDROID_HOST_OUT=~/android_src/out/host/linux-x86
 export ANDROID_TARGET_OUT=~/android_src/out/target/product/generic_x86
 
-
-
-
+# for afl
+export AFL_SKIP_CPUFREQ=1
+unset ASAN_OPTIONS

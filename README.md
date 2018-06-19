@@ -33,7 +33,7 @@ ln -s /path/to/this_repo/.linux_customize_bashrc ~/.linux_customize_bashrc
 	* to update vim plugins, issue command _PackUpdate_ in vim once in a while...
 
 * to update zplug, issue _zplug update_ once in a while....
-
+	* if you get 'unknown error' during install/update, on Ubuntu you may need to install gawk: __sudo apt get install gawk__ (probably the same on MacOS, via brew)
 * to install tmux plugin at first run: C-a C-I
 	* tmux prefix is set to C-a (screen-style)
 
