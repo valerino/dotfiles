@@ -11,9 +11,7 @@ ln -s /path/to/this_repo/.tmux.conf ~/.tmux.conf
 
 * install the package managers:
 ~~~
-mkdir -p ~/.vim/pack/plugins/opt
-cd ~/.vim/pack/plugins/opt
-git clone https://github.com/k-takata/minpac
+git clone https://github.com/k-takata/minpac ~/.vim/pack/plugins/opt/minpac
 git clone https://github.com/zplug/zplug ~/.zplug
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~~~
@@ -56,7 +54,7 @@ brew cask install font-hack-nerd-font
 
 ## Gnome-terminal (linux)
 * sudo apt-get install zsh
-* chsh -s `which zsh`
+* chsh -s /usr/bin/zsh
 * install https://github.com/dracula/gnome-terminal
  
 ## mappings (macos)
