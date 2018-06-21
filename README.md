@@ -53,7 +53,7 @@ brew cask install font-hack-nerd-font
 * install dracula theme from https://github.com/dracula/iterm
 
 ## Gnome-terminal (linux)
-* sudo apt-get install zsh
+* sudo apt-get install zsh xclip xsel 
 * chsh -s /usr/bin/zsh
 * install https://github.com/dracula/gnome-terminal
  

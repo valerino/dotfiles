@@ -11,9 +11,10 @@ AOSP_ROOT=~/aosp
 
 # the target device for AOSP
 #AOSP_DEVICE_CONFIG=aosp_angler-userdebug
-AOSP_DEVICE_CONFIG=aosp_x86-eng
+#AOSP_DEVICE_CONFIG=aosp_x86-eng
+AOSP_DEVICE_CONFIG=aosp_arm64-eng
 
-export PATH=~/bin:~/bin/ffmpeg-static/bin:$PATH
+export PATH=~/bin:~/repos/ffmpeg-static/bin:$PATH
 #export LC_ALL=en_US.UTF-8
 export LC_ALL=C
 
@@ -26,5 +27,5 @@ export ANDROID_HOST_OUT=~/android_src/out/host/linux-x86
 export ANDROID_TARGET_OUT=~/android_src/out/target/product/generic_x86
 
 # for afl
-export AFL_SKIP_CPUFREQ=1
-unset ASAN_OPTIONS
+#export AFL_SKIP_CPUFREQ=1
+#unset ASAN_OPTIONS

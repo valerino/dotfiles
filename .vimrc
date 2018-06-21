@@ -106,8 +106,8 @@ set enc=utf-8
 " show line numbers
 set number
 
-" open split in lower pane
-set splitbelow
+" open split in right pane
+set splitright
 
 " share clipboard with host
 if has('mac')
@@ -220,7 +220,7 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 "let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 "let g:netrw_altv=1
-"let g:netrw_preview = 1
+let g:netrw_preview = 1
 "let g:netrw_alto = 0
 let g:netrw_list_hide='.*\.swp$'
 "let g:netrw_browse_split = 4
