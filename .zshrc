@@ -12,12 +12,14 @@ zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "tarruda/zsh-autosuggestions", use:"zsh-autosuggestions.zsh"
+zplug "mafredri/zsh-async", from:github
+zplug "sindresorhus/pure", use:"pure.zsh", from:github, as:theme
 
 # Can manage local plugins
 # zplug "~/.zsh", from:local
 
 # Load theme file
-zplug 'dracula/zsh', as:theme
+#zplug 'dracula/zsh', as:theme
 
 # stuff from oh-my-zsh
 zplug "lib/key-bindings", from:oh-my-zsh
@@ -46,7 +48,7 @@ export VISUAL=vim
 export EDITOR=$VISUAL
 
 # path
-export PATH=~/bin:$PATH
+export PATH=~/usr/bin:~/bin:$PATH
 
 # additional customization
 case `uname` in
