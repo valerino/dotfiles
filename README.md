@@ -37,32 +37,39 @@ ln -s /path/to/this_repo/.linux_customize_bashrc ~/.linux_customize_bashrc
 * to install tmux plugin at first run: C-a C-I
 	* tmux prefix is set to C-a (screen-style)
 
+## linux
+~~~
+# install needed packages and set zsh as default shell
+sudo apt-get install zsh xclip xsel gsed
+chsh -s /usr/bin/zsh
+~~~
+
+### Gnome-terminal
+* install https://github.com/dracula/gnome-terminal
+
+### Konsole
+* https://draculatheme.com/konsole
+
 ## macos
-you may need to install gsed
+you may need to install *gsed*
 ~~~
 brew -v install gnu-sed
 ~~~
 
-## fonts (macos)
+### fonts
 ~~~
 brew tap caskroom/fonts
 brew cask install font-hack-nerd-font
 ~~~
 
-## iTerm2 (macos)
+### iTerm2
 * install dracula theme from https://github.com/dracula/iterm
 
-## Gnome-terminal (linux)
-* sudo apt-get install zsh xclip xsel 
-* chsh -s /usr/bin/zsh
-* install https://github.com/dracula/gnome-terminal
- 
-## mappings (macos)
-* in _iTerm2_, map _Command-w_ to \\\<C-w> ('send text with Vim special chars').
+* map _Command-w_ to \\\<C-w> ('send text with Vim special chars').
 	* This will remap Ctrl-w to Command-w to cycle windows in Vim.
-* in _iTerm2_, map _Command-a_ to \\\<C-a> ('send text with Vim special chars').
+* map _Command-a_ to \\\<C-a> ('send text with Vim special chars').
 	* This will remap Ctrl-a to Command-a in Tmux.
-* in _iTerm2_, map _Command-p_ to \\\<C-p> ('send text with Vim special chars').
+* map _Command-p_ to \\\<C-p> ('send text with Vim special chars').
 	* This will remap Ctrl-p to Command-p to activate CtrlP plugin in Vim 
 
 

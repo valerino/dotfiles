@@ -11,6 +11,12 @@ if exists('*minpac#init')
 	
 	" Add other plugins here.
 
+	" nerdtree
+	call minpac#add('scrooloose/nerdtree')
+	
+	" nerdtree git
+	call minpac#add('Xuyuanp/nerdtree-git-plugin')
+	
 	" unix helpers
 	call minpac#add('tpope/vim-eunuch')
 
@@ -218,14 +224,21 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 " builtin netrw
 """"""""""""""""""""""""""""""""""""""""""""""""
 "let g:netrw_banner = 0
-let g:netrw_liststyle = 3
+"let g:netrw_liststyle = 3
 "let g:netrw_altv=1
-let g:netrw_preview = 1
+"let g:netrw_preview = 1
 "let g:netrw_alto = 0
-let g:netrw_list_hide='.*\.swp$'
+"let g:netrw_list_hide='.*\.swp$'
 "let g:netrw_browse_split = 4
 "let g:netrw_winsize = 25
 "let g:netrw_chgwin = winnr()
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" nerdtree
+""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " lightline

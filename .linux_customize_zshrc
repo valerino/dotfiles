@@ -1,5 +1,8 @@
 # install a dircolor, i.e. dracula colors for gnome terminal (https://github.com/dracula/gnome-terminal)
-eval " dircolors -b ~/.dir_colors/dircolors "
+if [ -f ~/.dir_colors/dircolors ]; then
+	eval " dircolors -b ~/.dir_colors/dircolors "
+fi
+
 alias ls='ls --color=auto'
 
 # this is for AOSP dev, aosp doesn't like zsh....
@@ -7,4 +10,4 @@ if [ -f ~/.linux_customize_bashrc ]; then
 	bash --rcfile ~/.linux_customize_bashrc
 fi
 
-
+export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
