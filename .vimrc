@@ -237,8 +237,15 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 " nerdtree
 """"""""""""""""""""""""""""""""""""""""""""""""
 autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" open nerdtree on start
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" close vim if nerdtree is the only remained window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" toggle nerdtree with CTRL-t
+map <C-t> :NERDTreeToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " lightline
