@@ -11,9 +11,9 @@ if exists('*minpac#init')
 	
 	" Add other plugins here.
 
-	" ctags
+	" ctags management
 	call minpac#add('ludovicchabant/vim-gutentags')
-
+	
 	" nerdtree
 	call minpac#add('scrooloose/nerdtree')
 	
@@ -213,7 +213,7 @@ let g:SuperTabCrMapping=1
 """"""""""""""""""""""""""""""""""""""""""""""""
 " open with esc-esc
 let g:ctrlp_map = '<c-p>'
-
+map <C-g> :CtrlPTag<CR>
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_show_hidden=1
 let g:ctrlp_open_new_file = 'v'
@@ -249,9 +249,13 @@ autocmd VimEnter *
                  \ |   wincmd w
                  \ | endif
  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" auto-close nerdtree if it's last tab
+" close vim if nerdtree is the only remained window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" toggle nerdtree with CTRL-t
+map <C-t> :NERDTreeToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " lightline

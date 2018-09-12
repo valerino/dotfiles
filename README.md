@@ -71,7 +71,7 @@ brew cask install font-hack-nerd-font
 	* This will remap Ctrl-a to Command-a in Tmux.
 * map _Command-p_ to \\\<C-p> ('send text with Vim special chars').
 	* This will remap Ctrl-p to Command-p to activate CtrlP plugin in Vim 
-
+* _add others ....._
 
 
 
