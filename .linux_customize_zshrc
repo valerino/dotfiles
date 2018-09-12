@@ -11,3 +11,4 @@ if [ -f ~/.linux_customize_bashrc ]; then
 fi
 
 export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
+export PATH=~/bin/clion/bin:~/android-ndk:$PATH

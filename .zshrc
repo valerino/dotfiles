@@ -19,7 +19,7 @@ zplug "sindresorhus/pure", use:"pure.zsh", from:github, as:theme
 # zplug "~/.zsh", from:local
 
 # Load theme file
-#zplug 'dracula/zsh', as:theme
+zplug 'dracula/zsh', as:theme
 
 # stuff from oh-my-zsh
 zplug "lib/key-bindings", from:oh-my-zsh

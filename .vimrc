@@ -2,14 +2,17 @@
 " minpac vim8 plugin manager
 """"""""""""""""""""""""""""""""""""""""""""
 set packpath^=~/.vim
-silent! packadd minpac
+packadd minpac
 if exists('*minpac#init')
-	call minpac#init()
+	call minpac#init({'verbose':4})
 
 	" minpac must have {'type': 'opt'} so that it can be loaded with `packadd`.
 	call minpac#add('k-takata/minpac', {'type': 'opt'})
 	
 	" Add other plugins here.
+
+	" ctags
+	call minpac#add('ludovicchabant/vim-gutentags')
 
 	" nerdtree
 	call minpac#add('scrooloose/nerdtree')
@@ -237,7 +240,17 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 " nerdtree
 """"""""""""""""""""""""""""""""""""""""""""""""
 autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" auto-open nerdtree
+autocmd VimEnter *
+                 \   if !argc()
+                 \ |   Startify
+                 \ |   NERDTree
+                 \ |   wincmd w
+                 \ | endif
+ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" auto-close nerdtree if it's last tab
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""
