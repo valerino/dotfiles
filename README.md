@@ -50,6 +50,11 @@ chsh -s /usr/bin/zsh
 ### Konsole
 * https://draculatheme.com/konsole
 
+### Fonts
+* install a nerdfont as specified here : https://github.com/ryanoasis/nerd-fonts#option-1-download-and-install-manually (usually just unzip in your __~/.local/share/fonts__)
+* rebuild font cache with __sudo fc-cache -f -v__
+* set it into your terminal
+
 ## macos
 you may need to install *gsed*
 ~~~
