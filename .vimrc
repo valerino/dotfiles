@@ -14,7 +14,10 @@ if exists('*minpac#init')
 
 	" ctags management
 	call minpac#add('ludovicchabant/vim-gutentags')
-	
+
+	" golang support
+	call minpac#add('https://github.com/fatih/vim-go')
+
 	" nerdtree
 	call minpac#add('scrooloose/nerdtree')
 	
@@ -166,12 +169,12 @@ autocmd! bufwritepost .vimrc source %
 " ultisnips
 """""""""""""""""""""""""""""""""""""""""""""""
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-"let g:UltiSnipsExpandTrigger="<tab>"
-"let g:UltiSnipsJumpForwardTrigger="<c-b>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
-"let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsEditSplit="vertical"
 
 """""""""""""""""""""""""""""""""""""""""""""""
 " tagbar
@@ -182,7 +185,7 @@ nmap <F8> :TagbarToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""
 " autoformat
 """""""""""""""""""""""""""""""""""""""""""""""
-"au BufWrite *.c,*.cpp,*.h,*.hpp,*.m,*.mm,*.go,*.sh :Autoformat
+au BufWrite *.c,*.cpp,*.h,*.hpp,*.m,*.mm,*.go,*.sh :Autoformat
 
 """""""""""""""""""""""""""""""""""""""""""""""
 " maralla completor
