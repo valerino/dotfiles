@@ -15,9 +15,6 @@ if exists('*minpac#init')
 	" ctags management
 	call minpac#add('ludovicchabant/vim-gutentags')
 
-	" golang support
-	call minpac#add('https://github.com/fatih/vim-go')
-
 	" nerdtree
 	call minpac#add('scrooloose/nerdtree')
 	
