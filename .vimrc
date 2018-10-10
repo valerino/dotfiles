@@ -44,7 +44,7 @@ if exists('*minpac#init')
 
 	" maralla completor
 	call minpac#add('maralla/completor.vim')
-
+	
 	" tab completions
 	call minpac#add('ervandew/supertab')
 
@@ -277,4 +277,18 @@ let g:lightline = {
 \   }
 \}
 
+" go debugging
+cnoreabbrev godbg GoDebugStart
+cnoreabbrev godbgstop GoDebugStop
+cnoreabbrev gobp GoDebugBreakpoint
+
+" gn prints in hex the number(word) under cursor
+nnoremap gn :call ToHex(expand("<cWORD>"))<CR>
+function! ToHex(number)
+	let pattern = '[0-9]\+'
+	let matched = matchstr(a:number, pattern)
+	if matched
+		echo printf('dec=%s hex=0x%llx', matched, matched)
+	endif
+endfunction
 
