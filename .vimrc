@@ -263,7 +263,7 @@ map <C-t> :NERDTreeToggle<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
 let g:lightline = {
-\ 'colorscheme': 'Dracula',
+\ 'colorscheme': 'dracula',
 \   'active': {
 \     'left':[ [ 'mode', 'paste' ],
 \              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
