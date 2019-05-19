@@ -16,14 +16,14 @@ git clone https://github.com/zplug/zplug ~/.zplug
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~~~
 
-* use my customizations as base, they are loaded in the end of .zshrc according to the running OS
+* use my customizations as base, they are loaded (if found) in the end of .zshrc according to the running OS
 ~~~
-# symlink customizations and change them accordingly to suit your needs/os/env
-ln -s /path/to/this_repo/.linux_customize_zshrc ~/.linux_customize_zshrc
-ln -s /path/to/this_repo/.macos_customize_zshrc ~/.macos_customize_zshrc
+# you may use customizations and change them accordingly to suit your needs/os/env
+cp /path/to/this_repo/.linux_customize_zshrc.template ~/.linux_customize_zshrc
+cp /path/to/this_repo/.macos_customize_zshrc.template ~/.macos_customize_zshrc
 
 # this includes configuration for developing AOSP on linux, zsh will spawn bash
-ln -s /path/to/this_repo/.linux_customize_bashrc ~/.linux_customize_bashrc 
+cp /path/to/this_repo/.linux_customize_bashrc.template ~/.linux_customize_bashrc 
 ~~~
 
 * accept zplug prompts to install plugins
