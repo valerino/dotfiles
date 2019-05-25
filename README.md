@@ -1,5 +1,6 @@
 # my dotfiles
-**NOTE: FOR WSL, refer to the [WSL specific readme](./README-wsl.md) !!
+
+__NOTE: FOR WSL, refer to the [WSL specific readme](./README-wsl.md) !!__
 
 uses _minpac_ vim8 plugin manager, zplug (assumes _zsh_ as the default shell), tpm plugin manager for tmux
 
