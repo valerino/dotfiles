@@ -1,4 +1,6 @@
 # my dotfiles
+** NOTE: FOR WSL, refer to the [WSL specific readme](./README-wsl.md) !!
+
 uses _minpac_ vim8 plugin manager, zplug (assumes _zsh_ as the default shell), tpm plugin manager for tmux
 
 * after cloning this repo, symlink to your home:
@@ -36,7 +38,7 @@ cp /path/to/this_repo/.linux_customize_bashrc.template ~/.linux_customize_bashrc
 	* if you get 'unknown error' during install/update, on Ubuntu you may need to install gawk: __sudo apt get install gawk__ (probably the same on MacOS, via brew)
 * to install tmux plugin at first run: C-a C-I
 	* tmux prefix is set to C-a (screen-style)
-
+		
 ## linux
 ~~~
 # install needed packages and set zsh as default shell

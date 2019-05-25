@@ -1,0 +1,27 @@
+##########################################################
+# user customization
+########################################################## 
+
+# terminal
+export LANG=en_US.UTF-8
+
+# vim as default editor
+export VISUAL=vim
+export EDITOR=$VISUAL
+
+# path
+export PATH=~/usr/bin:~/bin:$PATH
+
+# additional customization
+case `uname` in
+  Darwin)
+ 	# my usual macos customizations
+	source ~/.macos_customize_zshrc
+  ;;
+  Linux)
+	# my usual linux customizations
+ 	source ~/.linux_customize_zshrc
+
+  ;;
+esac
+
