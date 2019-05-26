@@ -45,9 +45,6 @@ if exists('*minpac#init')
 	" vim defaults
 	call minpac#add('tpope/vim-sensible')
 	
-	" vinegar netrw extension
-	call minpac#add('tpope/vim-vinegar')
-
 	" ctrlP fuzzy search
 	call minpac#add('ctrlpvim/ctrlp.vim')
 
@@ -71,7 +68,6 @@ if exists('*minpac#init')
 
 	" markdown integration
 	call minpac#add('plasticboy/vim-markdown')
-
 
 	" remap esc to handle shitty touchbar on mbp
 	call minpac#add('zhou13/vim-easyescape')
@@ -220,19 +216,3 @@ let g:lightline = {
 \     'gitbranch': 'fugitive#head',
 \   }
 \}
-
-" go debugging
-cnoreabbrev godbg GoDebugStart
-cnoreabbrev godbgstop GoDebugStop
-cnoreabbrev gobp GoDebugBreakpoint
-
-" gn prints in hex the number(word) under cursor
-nnoremap gn :call ToHex(expand("<cWORD>"))<CR>
-function! ToHex(number)
-	let pattern = '[0-9]\+'
-	let matched = matchstr(a:number, pattern)
-	if matched
-		echo printf('dec=%s hex=0x%llx', matched, matched)
-	endif
-endfunction
-

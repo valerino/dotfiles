@@ -45,9 +45,6 @@ if exists('*minpac#init')
 	" vim defaults
 	call minpac#add('tpope/vim-sensible')
 	
-	" vinegar netrw extension
-	call minpac#add('tpope/vim-vinegar')
-
 	" ctrlP fuzzy search
 	call minpac#add('ctrlpvim/ctrlp.vim')
 
@@ -72,7 +69,6 @@ if exists('*minpac#init')
 	" markdown integration
 	call minpac#add('plasticboy/vim-markdown')
 
-
 	" remap esc to handle shitty touchbar on mbp
 	call minpac#add('zhou13/vim-easyescape')
 	
@@ -87,6 +83,11 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""
 " builtin
 """""""""""""""""""""""""""""""""""""""""""""""
+" wsl
+inoremap <Char-0x07F> <BS>
+nnoremap <Char-0x07F> <BS>
+set mouse=a
+
 " set color
 color dracula
 let g:dracula_colorterm = 0
@@ -126,9 +127,6 @@ set shiftwidth=4
 
 " allows to switch between buffers without saving first
 set hidden
-
-" enable mouse
-set mouse=a
 
 " enable pasting multiple times (paste, reselect, recopy)
 xnoremap p pgvy
@@ -221,18 +219,4 @@ let g:lightline = {
 \   }
 \}
 
-" go debugging
-cnoreabbrev godbg GoDebugStart
-cnoreabbrev godbgstop GoDebugStop
-cnoreabbrev gobp GoDebugBreakpoint
-
-" gn prints in hex the number(word) under cursor
-nnoremap gn :call ToHex(expand("<cWORD>"))<CR>
-function! ToHex(number)
-	let pattern = '[0-9]\+'
-	let matched = matchstr(a:number, pattern)
-	if matched
-		echo printf('dec=%s hex=0x%llx', matched, matched)
-	endif
-endfunction
 
