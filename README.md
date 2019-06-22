@@ -1,3 +1,7 @@
+# !!!!!!!!!!!!!
+# DEPRECATED, use [Hyper terminal based instead](https://github.com/valerino/dotfiles-hyper)
+# !!!!!!!!!!!!!
+
 # my dotfiles
 
 __NOTE: FOR WSL, refer to the [WSL specific readme](./README-wsl.md) !!__
